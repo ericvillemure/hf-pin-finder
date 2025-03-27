@@ -1,4 +1,5 @@
 from gtts import gTTS
+import os
 
 # Liste des chiffres avec leur écriture en français
 chiffres = [
@@ -14,9 +15,12 @@ chiffres = [
     ("9", "neuf")
 ]
 
+folder = "data/digits/fr-CA"
+os.makedirs(folder,exist_ok=True)
+
 # Génération et sauvegarde des fichiers MP3
 for digit, word in chiffres:
     tts = gTTS(text=word, lang='fr')
-    filename = f"data/digits/fr-CA/{digit}.mp3"
+    filename = f"{folder}/{digit}.mp3"
     tts.save(filename)
     print(f"Fichier {filename} généré avec le mot '{word}'")

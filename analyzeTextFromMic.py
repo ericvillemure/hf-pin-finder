@@ -39,8 +39,10 @@ def transcribe_audio(file_path):
         raise Exception('Problem detecting language')
 
     text = ''
+    
     for segment in segments:
-        text = text + segment.text
+        text = text + (segment.text if segment.no_speech_prob<0.6 else '')
+        
     return text
     # print(f"Detected language: {info.language} (probability {info.language_probability:.2f})\n")
     # for segment in segments:

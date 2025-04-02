@@ -8,8 +8,6 @@ from analyzeTextFromMic import record_audio, save_as_wav, transcribe_audio
 import json
 import datetime
 
-# NUMBER_OF_PINS = 5
-
 csv_file = "data/four-digit-pin-codes-sorted-by-frequency-withcount.csv"
 csv_url = "https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/four-digit-pin-codes-sorted-by-frequency-withcount.csv"
 rpi_base_url = "http://raspberrypi.local:8000"

@@ -37,7 +37,7 @@ with Path(audio_file).open("rb") as audio_file:
         response_format="verbose_json",
         file=audio_file,
         language="fr",
-        prompt="Tu es un systeme de reconaissance vocale qui analyse les message audio provenant d'un systaime de telephone main-libre sur un vehicule."
+        prompt="Tu es un systeme de reconaissance vocale qui analyse les message audio provenant d'un systeme de telephone main-libre sur un vehicule."
     )
 
     print(response)

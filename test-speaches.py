@@ -5,7 +5,7 @@ from openai import OpenAI
 from analyzeTextFromMic import record_audio, save_as_wav, transcribe_audio
 import wave
 
-whisper_base_url = "http://ABSORB-DLFT044:8000/v1"
+from config import whisper_base_url
 
 client = OpenAI(
     # This is the default and can be omitted

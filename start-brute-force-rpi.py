@@ -11,9 +11,9 @@ import json
 import datetime
 from openai import OpenAI
 
-from servoController import clickRight, cleanup
+from config import whisper_base_url
 
-whisper_base_url = "http://ABSORB-DLFT044:8000/v1"
+from servoController import clickRight, cleanup
 
 client = OpenAI(
     api_key="unused",
